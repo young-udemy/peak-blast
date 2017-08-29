@@ -57,9 +57,7 @@ class MineField:
         :return: list
         """
         bangs = self.get_bangs({starter}, self.mines - {starter})
-        bangs = [Bang(starter, i, c[0], c[1]) for i, c in enumerate(bangs)]
-
-        return bangs
+        return [Bang(starter, i, c[0], c[1]) for i, c in enumerate(bangs)]
 
     def get_bangs(self, triggers, candidates):
         """
